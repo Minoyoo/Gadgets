@@ -44,6 +44,7 @@ chmod +x ./init.sh && ./init.sh
 
 
 ——————————————————————————
+
 P盘
 
 在你准备P盘的文件路径下, 新建一个文件夹 plots (假设就在 seekchain 文件夹下)
@@ -77,3 +78,20 @@ screen 	-R  parity
 
 
  18. 修改配置文件 config.yaml
+vim config.yaml
+
+19. 依次替换PID 和 地址
+先输入 :
+然后输入  %s/原来的PID/你刚刚生成的PID/g 
+再次输入  :
+然后输入  %s/原来的地址/你刚刚生成的地址/g 
+
+20. 修改 P 盘文件路径,例如我们刚生成的p 盘路径是 /root/seekchain/plots 
+
+21. 新建一个screen 窗口
+screen -R mining
+
+22. 启动挖矿程序
+chmod +x ./miner.sh && ./miner.sh
+
+
