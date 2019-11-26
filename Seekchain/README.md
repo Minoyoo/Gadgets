@@ -5,7 +5,7 @@
 
 2. 进入 root 用户
 
-`sudo -i`
+*`sudo -i`*
 
 ![教程.gif](./img/Tutorials.gif)
 
