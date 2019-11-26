@@ -5,9 +5,9 @@
 
 2. 进入 root 用户
 
-(```)
+```
 sudo -i
-(```)
+```
 
 ![教程.gif](./img/Tutorials.gif)
 
