@@ -1,5 +1,12 @@
 如何搭建SeekChain挖矿程序（Ubuntu 版本）
 ===================================
+
+##完整版教程
+![教程.gif](./img/Tutorials.gif)
+
+
+
+##分步教程
 1. 登录你的 Ubuntu 系统(矿机)
 
 
@@ -9,7 +16,6 @@
 sudo -i
 ```
 
-![教程.gif](./img/Tutorials.gif)
 
 会提示输入密码
 
@@ -72,21 +78,26 @@ chmod +x ./init.sh && ./init.sh
 12. 请复制并且保存好刚才生成的 PID ,以及 钱包地址 
 
 
-——————————————————————————
+------
 
-P盘
+###P盘
 
 在你准备P盘的文件路径下, 新建一个文件夹 plots (假设就在 seekchain 文件夹下)
 
+```
 mkdir plots
 
-chmod +x ./engraver && ./engraver -i 你刚刚生成的PID -p "你的plost 文件夹绝对的路径"  -s 0 -n 4096
+
+chmod +x ./engraver && ./engraver -i 你刚刚生成的PID -p "你的plost 文件夹的绝对路径"  -s 0 -n 4096
+```
 
 例如:
+```
 
 chmod +x ./engraver && ./engraver -i 1434343434434 -p "/root/seekchain/plots"  -s 0 -n 4096  
+```
 
-——————————————————————————
+------
 
 13. 修改配置文件 seek_config.toml 
 
@@ -96,9 +107,9 @@ vim seek_config.toml
 
 14. 替换里面所有的地址为刚刚我们生成的地址
 
->先输入 :
+>先输入 ``` :  ```
 
->然后输入  %s/原来的地址/你刚刚生成的地址/g 
+>然后输入 ``` %s/0xfafd59483af0f9abf611fc0dcfb23bfec6249861/你刚刚生成的地址/g ```
 
 >再次输入  :
 
@@ -133,13 +144,19 @@ vim config.yaml
 
 >先输入 :
 
->然后输入  %s/原来的PID/你刚刚生成的PID/g 
+>然后输入  %s/14966090477137598561/你刚刚生成的PID/g 
 
 >再次输入  :
 
->然后输入  %s/原来的地址/你刚刚生成的地址/g 
+>然后输入  %s/0xfafd59483af0f9abf611fc0dcfb23bfec6249861/你刚刚生成的地址/g 
+
+>再次输入  :
+
+>最后输入 wq
+
 
 20. 修改 P 盘文件路径,例如我们刚生成的p 盘路径是 /root/seekchain/plots 
+
 
 21. 新建一个screen 窗口
 
