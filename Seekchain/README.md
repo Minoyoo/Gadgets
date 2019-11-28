@@ -80,7 +80,7 @@ chmod +x ./init.sh && ./init.sh
 
 ------
 
-###P盘
+### P盘
 
 在你准备P盘的文件路径下, 新建一个文件夹 plots (假设就在 seekchain 文件夹下)
 
